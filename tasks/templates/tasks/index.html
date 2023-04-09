@@ -4,6 +4,8 @@
     <ul>
         {% for item in tasks %}
             <li>{{ item }}</li>
+        {% empty %}
+            <li>NO TASK</li>
         {% endfor %}
     </ul>
     <a href="{% url 'tasks:add' %}">Add a new task</a>
